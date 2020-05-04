@@ -26,13 +26,13 @@ plt.legend()
 pi = np.pi
 h = 6.62607004e-34
 k_B = 1.38064852e-23
-m = 4
 T_R = 293
+amu = 1.66053904e-27 #kg
+m = 4*amu
 N = 1
 
 
-U_R = (3/2)*N*k_B*T_R
-λ_R = h*np.sqrt((3*N)/(4*pi*m*U_R))
+u_R = (3/2)*k_B*T_R                 # U_R delen door N
+λ_R = h*np.sqrt((3)/(4*pi*m*u_R))
 
-def thermal_wavelength(U):
-    return h*np.sqrt((3*N)/(4*pi*m*U))
+# $\lambda = h\sqrt{\frac{3N}{4\pi m U_R}}\sqrt{\frac{U_R}{U}} = \lambda_R\sqrt{\frac{U_R}{U}}$ 
