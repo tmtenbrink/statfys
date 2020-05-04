@@ -29,7 +29,6 @@ def stirling_multiplicity(N_start, N_end,n):
     multiplicity = 1/np.sqrt(2*pi)*np.multiply(root,float_power)
     return multiplicity
 
-
 exact = exact_multiplicity(N_start, N_end, n)
 stirling = stirling_multiplicity(N_start, N_end, n)
 
